@@ -1,0 +1,96 @@
+/* styles.css */
+
+/* Estilo geral da página */
+body {
+    background-color: #1c2833; /* Fundo escuro e elegante */
+    font-family: 'Arial', sans-serif; /* Fonte mais formal e legível */
+    color: #ffffff; /* Texto claro para contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo da galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo de cada post */
+.post {
+    background-color: #2c3e50; /* Fundo escuro para os posts, combinando com o tema */
+    border: 2px solid #34495e; /* Borda suave e elegante */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo da imagem sem borda */
+.post img {
+    max-width: 100%;
+    border-radius: 5px; /* Manter o arredondamento dos cantos */
+    transition: transform 0.3s ease; /* Efeito suave de transformação */
+}
+
+/* Título do post */
+.post h3 {
+    color: #f1c40f; /* Amarelo, uma cor associada ao futebol */
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-weight: bold; /* Maior ênfase no título */
+}
+
+/* Descrição inicialmente oculta */
+.post p.descricao {
+    color: #ffffff; /* Texto claro para a descrição */
+    font-size: 14px;
+    opacity: 0; /* Descrição invisível por padrão */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+/* Descrição visível ao passar o mouse */
+.post:hover p.descricao {
+    opacity: 1;
+}
+
+/* Efeito na imagem ao passar o mouse */
+.post:hover img {
+    transform: scale(1.05); /* Leve aumento na imagem para dar destaque */
+}
+
+/* Botão de envio */
+.botao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27ae60; /* Verde, cor relacionada ao futebol */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Arial', sans-serif; /* Fonte mais formal */
+}
+
+/* Efeito de hover no botão */
+.botao:hover {
+    background-color: #2ecc71; /* Verde mais vibrante no hover */
+}

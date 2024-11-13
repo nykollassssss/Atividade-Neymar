@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Post</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            background-color: #1b5e20; /* Verde, cor associada ao futebol */
+            font-family: 'Arial', sans-serif; /* Fonte mais clean e moderna */
+            color: #ffffff; /* Texto branco para contraste */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilo do título */
+        h2 {
+            color: #ffeb3b; /* Amarelo brilhante, lembrando uma camisa de time */
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-align: center;
+            text-transform: uppercase; /* Para um estilo mais esportivo */
+            letter-spacing: 2px;
+        }
+
+        /* Estilo do formulário */
+        form {
+            background-color: #ffffff; /* Fundo branco */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            border: 3px solid #4caf50; /* Verde mais forte, como cores de time */
+        }
+
+        /* Estilo dos rótulos */
+        label {
+            display: block;
+            color: #333333; /* Cor do texto */
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* Estilo dos campos de entrada */
+        input[type="text"], textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #4caf50; /* Verde como borda */
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do botão de envio */
+        input[type="submit"] {
+            background-color: #ff5722; /* Laranja, lembrando uma bola de futebol */
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Efeito no botão ao passar o mouse */
+        input[type="submit"]:hover {
+            background-color: #e64a19; /* Laranja mais escuro */
+        }
+    </style>
+</head>
+<body>
+    <form action="upload_post.php" method="post" enctype="multipart/form-data">
+        <h2>Enviar Post</h2>
+
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" rows="4" required></textarea>
+
+        <label for="imagem">Imagem:</label>
+        <input type="file" name="imagem" id="imagem" accept="image/*" required>
+
+        <input type="submit" value="Enviar Post">
+    </form>
+</body>
+</html>
